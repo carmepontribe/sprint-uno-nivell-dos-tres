@@ -1,0 +1,252 @@
+*{
+    margin:0px;
+    padding: 10px;
+    box-sizing:border-box;
+    /*el padding y el margin quedan incluidos en la medida de la caja*/
+    }
+body{
+    /*font-family: 'Lora', serif;*/
+    font-family: 'Montserrat', sans-serif;
+}
+/*posem estils generals per totes les ancles*/
+a{text-decoration: none;
+    font-weight: 400;
+
+}
+.padre{
+    display: flex;
+    flex-flow: column nowrap;
+}
+/* .margen-interno{ */
+    /* padding: 0 30px; */
+    /*0 a dalt i a baix i 30 als dos cantons*/
+/* } */
+.header{
+        background: url(images/header.jpg);
+        background-position: center;
+        background-attachment: contain;
+        background-size: cover;
+        display:flex;
+        flex-flow: column nowrap;
+    }
+        .menu{
+            display:flex;
+            flex-flow: row nowrap;
+            height: 100px;
+            align-items: center;
+            /* animation: moverDerecha 1s ease-in; */
+            
+        }
+            .logo{
+                flex: 1 1 auto;/*es flexible*/
+                display: inline-block;/*si no no es mou el logo*/
+                animation: moverIzquierda 1s ease-in;
+
+                
+            }
+            .logo img {
+                height: 100px;
+                
+            }
+            .nav{
+                flex: 5 1 auto;
+            }
+                .nav a{
+                    color:#343434;
+                    font-size: 18px;
+                    /*text-transform: uppercase;es per posar el text en caixa alta*/
+                     padding: 0 30px;/* 0 píxels a dalt i 0 a baix i 10 píxels a la dreta i 10 a l'esquerra*/
+                     
+                }   
+                    .nav a:hover{
+                        color:#FF865E;
+                    }
+            .social{
+                flex: 1 1 auto;
+                display:flex;
+            }
+                .social a{
+                     color:#343434;
+                    font-size: 25px;
+                 }
+                    .social a:hover{
+                    color:#FF865E;
+                    }
+    
+        .texto-principal{
+            height:300px;
+            display: flex;
+            align-items: flex-end; 
+           /* aquest alinea en alçada i el de baix en horitzontal */
+            justify-content: center; 
+            
+        
+         }
+         /* .caixaGrisa{ */
+            /* display:flex; */
+            /* background-color:rgba(150, 147, 146, 0.2); */
+            /* padding:52px 120px 0px 120px; */
+            /* align-items: flex-end; */
+        /* } */
+            h1{
+                font-family: 'Lora';
+                font-size: 24px;
+                color:rgba(255,134,94,.8);
+                background-color:rgba(150, 147, 146, 0.2);
+                padding:32px 200px 60px 200px;
+                /* align-items: flex-start; */
+                /* display:inline-block;   */
+                animation: arriba 1s ease-in;
+
+        }
+        
+.section{
+    background: #f7f7f7;
+    display:flex;
+}
+        .articulos{
+            background: rgb(215, 215, 215) ;
+            flex: 2 1 auto;
+            display:flex;
+            flex-flow:row wrap;
+            
+        }
+            .article{
+            flex:1 1 40%;
+            color:rgb(240, 240, 240);
+            font-size:12 px;
+            margin: 10 px 10px 0 0px;
+            background: #ececec;
+            }
+            .article a{
+                color:rgb(83, 83, 83)
+            }
+            .article a:hover{
+                color:#f08080
+            }
+
+            .article img {
+                width: 100%;  
+                }
+                h4{
+                    color: #fff;
+                    font-size: 13 px;
+                    padding: 10px;
+                     /* arriba y abajo 10px i als costats 0*/ 
+                    margin-top: -60px;
+                    margin-left: 10px;
+                }
+                h2{
+                    color:#fff;
+                    font-size: 25 px;
+                    text-transform: uppercase;
+                    padding: 10px;
+                    margin: 10px;
+                    background: #f08080;
+                }
+                p{
+                    color:rgb(83, 83, 83);
+                    column-count:2; 
+                }
+                
+                
+            .final-text{
+            flex:1 1 100%;
+            }
+                .final-text p{
+                    column-count:1; 
+                    text-align: center; 
+                    font-weight: bold;
+                }
+        .aside{
+            background:rgb(150, 150, 150);
+            flex: 1 1 auto;
+        
+            
+        }
+        
+        .aside h3{
+            color: #000;
+            font-size: 13 px;
+            padding: 10px;  
+        }
+        .aside p{
+            color: #000;
+            text-align: center;
+            column-count:1;
+            font-size: 10 px;
+            
+        }
+            
+.footer{
+    background: #ececec;
+    display:flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+        .pie{
+            text-align: center;
+            }
+            .pie a{
+                color:#000;
+                display:flex;
+                font-size: 12px;
+            }
+@media all and (max-width:800px){
+    .section{
+        flex-direction: column;
+    }
+    .menu{
+        flex-direction: column;
+        height: auto;
+    }
+    .aside {
+        display: flex;
+        justify-content: center;
+    }
+}
+@media all and (max-width:600px){
+    .articulos{
+        flex-direction: column;
+    }
+}
+ @media all and (max-width:600px){
+        .aside{
+            flex-direction: column;
+        }
+    }
+
+    @keyframes moverIzquierda{
+        0%{
+            opacity: 0;
+            transform: translateX(-100px);
+        }
+        
+        100%{
+            opacity: 1;
+            transform: translate(0);
+        }
+    }
+
+    @keyframes moverDerecha{
+        0%{
+            opacity: 0;
+            transform: translateX(100px);
+        }
+        
+        100%{
+            opacity: 1;
+            transform: translate(0);
+        }
+    }
+    @keyframes arriba{
+        0%{
+            opacity: 0;
+            transform: translateY(100px);
+        }
+        
+        100%{
+            opacity: 1;
+            transform: translate(0);
+        }
+    }
